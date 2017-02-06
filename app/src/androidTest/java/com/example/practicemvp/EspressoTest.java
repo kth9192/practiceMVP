@@ -3,11 +3,9 @@ package com.example.practicemvp;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
-import static android.support.test.espresso.Espresso.onData;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.pressBack;
-import static android.support.test.espresso.action.ViewActions.scrollTo;
 import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.withContentDescription;
@@ -25,8 +23,8 @@ import org.junit.runner.RunWith;
 @RunWith(AndroidJUnit4.class)
 public class EspressoTest {
     @Rule
-    public ActivityTestRule<MainActivity> mainActivityActivityTestRule =
-            new ActivityTestRule<MainActivity>(MainActivity.class);
+    public ActivityTestRule<LoginAcitivty> mainActivityActivityTestRule =
+            new ActivityTestRule<LoginAcitivty>(LoginAcitivty.class);
 
     @Test
     public  void changeText(){

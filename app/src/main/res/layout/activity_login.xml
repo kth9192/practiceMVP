@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.practicemvp.MainActivity">
+    tools:context="com.example.practicemvp.LoginAcitivty">
 
     <TextView
         android:layout_width="wrap_content"
@@ -19,21 +19,44 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="75dp" />
 
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/PasswordBox"
+        android:contentDescription="text_field"
+        android:inputType="text"
+        android:hint="비밀번호"
+        android:layout_above="@+id/login_button"
+        android:layout_alignLeft="@+id/login_button"
+        android:layout_alignStart="@+id/login_button" />
+
     <Button
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="Change"
-        android:id="@+id/change_button"
+        android:text="로그인"
+        android:id="@+id/login_button"
         android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/sign_button"
+        android:layout_alignStart="@+id/sign_button" />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="회원가입"
+        android:id="@+id/sign_button"
+        android:layout_below="@+id/login_button"
         android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:layout_above="@+id/change_button"
-        android:layout_centerHorizontal="true"
+        android:id="@+id/IdBox"
         android:contentDescription="text_field"
         android:inputType="text"
-        android:hint="Change Me" />
+        android:hint="아이디"
+        android:layout_above="@+id/PasswordBox"
+        android:layout_alignLeft="@+id/PasswordBox"
+        android:layout_alignStart="@+id/PasswordBox" />
+
+
 </RelativeLayout>

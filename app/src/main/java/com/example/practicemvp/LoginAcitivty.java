@@ -8,20 +8,22 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 // MVP패턴을 적용한 안드로이드 샘플
-public class MainActivity extends AppCompatActivity {
+public class LoginAcitivty extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
-        Button changeButton = (Button) findViewById(R.id.change_button);
         final TextView textView = (TextView) findViewById(R.id.top_text);
-        final EditText textField = (EditText) findViewById(R.id.editText);
+        final EditText IDField = (EditText) findViewById(R.id.IdBox);
+        final EditText PWField = (EditText) findViewById(R.id.PasswordBox);
 
-        changeButton.setOnClickListener(new View.OnClickListener() {
+        Button loginButton = (Button) findViewById(R.id.login_button);
+        Button joinButton = (Button) findViewById(R.id.login_button);
+
+        loginButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                textView.setText(textField.getText());
             }
         });
     }

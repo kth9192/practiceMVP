@@ -22,22 +22,21 @@ import org.junit.runner.RunWith;
 
 @RunWith(AndroidJUnit4.class)
 public class EspressoTest {
-    @Rule
-    public ActivityTestRule<LoginAcitivty> mainActivityActivityTestRule =
-            new ActivityTestRule<LoginAcitivty>(LoginAcitivty.class);
-
-    @Test
-    public  void changeText(){
-
-        //원본 텍스트 출력 체크
-        onView(withId(R.id.top_text)).check(matches(withText("Hello World!")));
-        //에디트 텍스트로 텍스트 보내기
-        onView(withContentDescription("text_field")).perform(typeText("Whoa Espresso is easy!"), pressBack());
-        //체인지 버튼 클릭
-        onView(withId(R.id.change_button)).perform( click());
-        //
-        onView(withId(R.id.top_text)).check(matches(withText("Whoa Espresso is easy!")));
-
-
-    }
+//    @Rule
+//    public ActivityTestRule<LoginAcitivty> mainActivityActivityTestRule =
+//            new ActivityTestRule<LoginAcitivty>(LoginAcitivty.class);
+//
+//    @Test
+//    public  void changeText(){
+//
+//        //원본 텍스트 출력 체크
+//        onView(withId(R.id.top_text)).check(matches(withText("Hello World!")));
+//        //에디트 텍스트로 텍스트 보내기
+//        onView(withContentDescription("text_field")).perform(typeText("Whoa Espresso is easy!"), pressBack());
+//        //체인지 버튼 클릭
+//        onView(withId(R.id.change_button)).perform( click());
+//        //
+//        onView(withId(R.id.top_text)).check(matches(withText("Whoa Espresso is easy!")));
+//
+//    }
 }

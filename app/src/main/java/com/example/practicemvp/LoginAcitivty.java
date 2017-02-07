@@ -26,21 +26,23 @@ public class LoginAcitivty extends AppCompatActivity implements loginView {
 
     private void initUI(){
         final TextView textView = (TextView) findViewById(R.id.top_text);
-        final EditText IDField = (EditText) findViewById(R.id.emailBox);
+        final EditText EmailField = (EditText) findViewById(R.id.emailBox);
         final EditText PWField = (EditText) findViewById(R.id.PasswordBox);
 
         Button loginButton = (Button) findViewById(R.id.login_button);
         Button joinButton = (Button) findViewById(R.id.join_button);
+
         loginButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-
+                mPresenter.login(EmailField.getText().toString(), PWField.getText().toString());
             }
         });
     }
 
     @Override
     public void login_errorMessage() {
+
 
     }
 }

@@ -6,7 +6,5 @@ package com.example.practicemvp;
 
 public interface loginPresenter {
 
-     String permission_check(String email, String password);
-
-     void login();
+     void login(String email, String password);
 }

@@ -5,23 +5,28 @@ package com.example.practicemvp;
  */
 
 //프레젠터
-public class PresenterImpl implements loginPresenter {
+public class PresenterImpl implements loginPresenter  , loginInteractor.CheckInteractor{
 
     private loginView mview;
     private loginModel mloginModel;
 
     public PresenterImpl(loginView mview){
         this.mview = mview;
-        mloginModel = new loginModel();
+        mloginModel = new loginModel(this);
     }
 
     @Override
-    public String permission_check(String email, String password) {
-        return null;
+    public void login(String email, String password) {
+        mloginModel.checkData(email, password);
     }
 
     @Override
-    public void login() {
+    public void successLogin() {
+
+    }
+
+    @Override
+    public void failedLogin() {
 
     }
 }

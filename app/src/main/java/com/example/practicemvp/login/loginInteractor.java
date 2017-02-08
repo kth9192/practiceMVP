@@ -1,4 +1,6 @@
-package com.example.practicemvp;
+package com.example.practicemvp.login;
+
+import android.content.Context;
 
 /**
  * Created by kth919 on 2017-02-07.
@@ -9,7 +11,7 @@ package com.example.practicemvp;
 public interface loginInteractor {
 
     //로그인 체크
-    void checkData(String email, String password);
+    void checkData(String email, String password, Context context);
 
     interface CheckInteractor{ // db등에서 데이터를 가져오는 getData와 따로 쓰기 위해 분리
         void successLogin();

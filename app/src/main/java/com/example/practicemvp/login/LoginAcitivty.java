@@ -49,8 +49,16 @@ public class LoginAcitivty extends AppCompatActivity implements loginView {
     }
 
     @Override
+    public void login_Message() {
+
+
+    }
+
+    @Override
     public void login_errorMessage() {
 
 
     }
+
+
 }

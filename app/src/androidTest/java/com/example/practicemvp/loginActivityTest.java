@@ -40,6 +40,5 @@ public class loginActivityTest {
 
         onView(withId(R.id.PasswordBox)).check(matches(withText("1234")));
 
-
     }
 }

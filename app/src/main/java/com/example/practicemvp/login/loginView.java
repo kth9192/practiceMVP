@@ -6,6 +6,9 @@ package com.example.practicemvp.login;
 
 public interface loginView {
 
+
+    void login_Message();
+
     void login_errorMessage();
 
 }

@@ -28,11 +28,11 @@ public class PresenterImpl implements loginPresenter  , loginInteractor.CheckInt
 
     @Override
     public void successLogin() {
-
+        mview.login_Message();
     }
 
     @Override
     public void failedLogin() {
-
+        mview.login_errorMessage();
     }
 }

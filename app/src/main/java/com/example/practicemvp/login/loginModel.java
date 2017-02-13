@@ -1,10 +1,6 @@
 package com.example.practicemvp.login;
 
-import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
-
-import com.example.practicemvp.Database.daoDAO;
+import com.example.practicemvp.Database.DaoDao;
 
 import java.util.HashMap;
 
@@ -12,47 +8,44 @@ import java.util.HashMap;
  * Created by kth919 on 2017-02-05.
  */
 
-public class loginModel implements loginInteractor {
+public class LoginModel implements loginInteractor {
 
-    private String TAG = loginModel.class.getName();
+    private String TAG = LoginModel.class.getName();
 
-    private String memberEmail;
-    private String memberPW;
     private loginInteractor.CheckInteractor mCheckInteractor;
     private int login_flag = 0;
 
-    daoDAO memberDAO;
-    private SQLiteDatabase db;
+    DaoDao memberDAO;
 
-    public loginModel(loginInteractor.CheckInteractor checkInteractor){
+    public LoginModel(loginInteractor.CheckInteractor checkInteractor){
         mCheckInteractor = checkInteractor;
     }
 
     @Override
-    public void checkData(String email, String password, Context context) {
+    public void checkData(String email, String password) {
 
         HashMap<String, String> memberSourceMap = new HashMap<>();
         HashMap<String, String> memberInfoMap = new HashMap<>();
 
-        memberDAO = new daoDAO();
+        memberDAO = new DaoDao();
         memberInfoMap = memberDAO.dataLoad();
 
+            for(int i = 0; i<memberInfoMap.size(); i++){
 
-        Log.d(TAG, String.valueOf(context));
-
-        for(int i = 0; i<memberInfoMap.size(); i++){
             if (memberInfoMap.containsKey(email) &&  password == memberInfoMap.get(i))
             {
-                login_flag = 1;
+                login_thrower(true);
+            }else {
+                login_thrower(false);
             }
         }
+    }
 
-        if (login_flag == 1)
-        {
-            mCheckInteractor.successLogin();
-        }else {
-            mCheckInteractor.failedLogin();
+    public void login_thrower(boolean flag) {
+        if (flag) {
+            mCheckInteractor.login_flag(true);
+        } else {
+            mCheckInteractor.login_flag(false);
         }
-
     }
 }

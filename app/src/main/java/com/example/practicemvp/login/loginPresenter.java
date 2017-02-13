@@ -8,5 +8,5 @@ import android.content.Context;
 
 public interface loginPresenter {
 
-     void login(String email, String password, Context context);
+     void login(String email, String password);
 }

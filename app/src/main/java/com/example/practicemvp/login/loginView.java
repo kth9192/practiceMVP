@@ -6,6 +6,9 @@ package com.example.practicemvp.login;
 
 public interface loginView {
 
+    void initUI();
+
+    void login_trigger(String email , String pw);
 
     void login_Message();
 

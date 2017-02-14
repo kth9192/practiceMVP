@@ -1,11 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/jointext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/join_accept"
+        android:layout_marginBottom="181dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
-</LinearLayout>
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/join_nick"
+        android:hint="닉네임"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/join_pw"
+        android:layout_alignStart="@+id/join_pw" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/join_pw"
+        android:hint="비밀번호"
+        android:layout_above="@+id/join_nick"
+        android:layout_alignLeft="@+id/join_email"
+        android:layout_alignStart="@+id/join_email" />
+
+    <EditText
+        android:id="@+id/join_email"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="이메일"
+        android:layout_above="@+id/join_pw"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

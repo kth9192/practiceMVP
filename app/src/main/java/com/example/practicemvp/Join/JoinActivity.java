@@ -2,6 +2,9 @@ package com.example.practicemvp.Join;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.practicemvp.R;
@@ -12,7 +15,10 @@ import com.example.practicemvp.R;
 
 public class JoinActivity extends AppCompatActivity {
 
-    private TextView textView;
+    private EditText editEmail;
+    private EditText editPw;
+    private EditText editNick;
+    private Button join_accept;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,12 +26,20 @@ public class JoinActivity extends AppCompatActivity {
         setContentView(R.layout.activity_join);
 
         initUI();
-
     }
 
     public void initUI() {
-        textView = (TextView) findViewById(R.id.jointext);
-        textView.setText("hi im join");
+        editEmail = (EditText) findViewById(R.id.join_email);
+        editPw= (EditText) findViewById(R.id.join_pw);
+        editNick = (EditText) findViewById(R.id.join_nick);
+
+        join_accept = (Button) findViewById(R.id.join_accept);
+//        join_accept.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//            }
+//        });
 
     }
 }

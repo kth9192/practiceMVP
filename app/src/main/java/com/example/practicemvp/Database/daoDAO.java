@@ -27,7 +27,7 @@ public class DaoDao implements daoService {
     public DaoDao() {
         emailList.add("kth919");
         PWList.add("1234");
-        NickList.add("ㅋㅋㅋ");
+        NickList.add("zzz");
     }
 
 //    public class dataModel{

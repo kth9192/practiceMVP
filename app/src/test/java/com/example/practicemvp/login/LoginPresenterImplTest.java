@@ -8,7 +8,7 @@ import org.mockito.MockitoAnnotations;
 /**
  * Created by kth919 on 2017-02-13.
  */
-public class PresenterImplTest {
+public class LoginPresenterImplTest {
     @Mock
     private loginPresenter mloginPresenter;
 
@@ -18,7 +18,7 @@ public class PresenterImplTest {
     @Mock
     private loginView mloginView;
 
-    private PresenterImpl presenterImpl;
+    private LoginPresenterImpl loginPresenterImpl;
 
     private LoginModel mloginModel;
 
@@ -26,7 +26,7 @@ public class PresenterImplTest {
     public void setUp() throws Exception {
 
        MockitoAnnotations.initMocks(this);
-       presenterImpl = new PresenterImpl(mloginView);
+       loginPresenterImpl = new LoginPresenterImpl(mloginView);
         mloginModel = new LoginModel(mCheckInteractor);
 
     }

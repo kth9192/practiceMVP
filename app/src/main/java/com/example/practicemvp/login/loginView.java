@@ -10,6 +10,8 @@ public interface loginView {
 
     void login_trigger(String email , String pw);
 
+    void join_trigger();
+
     void login_Message();
 
     void login_errorMessage();

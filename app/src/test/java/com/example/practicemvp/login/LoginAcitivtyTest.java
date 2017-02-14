@@ -5,8 +5,6 @@ import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import static org.junit.Assert.*;
-
 /**
  * Created by kth919 on 2017-02-13.
  */
@@ -15,17 +13,17 @@ public class LoginAcitivtyTest {
     @Mock
     private loginView mloginView;
 
-    private PresenterImpl mPresenter;
+    private LoginPresenterImpl mLoginPresenter;
 
     @Before
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
-        mPresenter = new PresenterImpl(mloginView);
+        mLoginPresenter = new LoginPresenterImpl(mloginView);
     }
 
     @Test
     public void login_trigger() throws Exception {
-        mPresenter.login("kth919", "1584");
+        mLoginPresenter.login("kth919", "1584");
     }
 
     @Test

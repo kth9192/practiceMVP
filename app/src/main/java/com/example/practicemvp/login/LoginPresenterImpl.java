@@ -5,14 +5,14 @@ package com.example.practicemvp.login;
  */
 
 //프레젠터
-public class PresenterImpl implements loginPresenter  , loginInteractor.CheckInteractor{
+public class LoginPresenterImpl implements loginPresenter  , loginInteractor.CheckInteractor{
 
-    private String TAG = PresenterImpl.class.getName();
+    private String TAG = LoginPresenterImpl.class.getName();
 
     private loginView mview;
     private LoginModel mloginModel;
 
-    public PresenterImpl(loginView mview){
+    public LoginPresenterImpl(loginView mview){
         this.mview = mview;
         mloginModel = new LoginModel(this);
     }

@@ -1,6 +1,7 @@
 package com.example.practicemvp.login;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.practicemvp.Join.JoinActivity;
+import com.example.practicemvp.Join.JoinPresenterImpl;
 import com.example.practicemvp.R;
 
 // MVP패턴을 적용한 안드로이드 샘플
@@ -18,7 +21,7 @@ public class LoginAcitivty extends AppCompatActivity implements loginView {
 
     private String TAG = LoginAcitivty.class.getName();
 
-    private PresenterImpl mPresenter;
+    private LoginPresenterImpl mLoginPresenter;
     private Context mcontext;
     private TextView textView;
     private EditText EmailField;
@@ -30,7 +33,7 @@ public class LoginAcitivty extends AppCompatActivity implements loginView {
         setContentView(R.layout.activity_login);
         mcontext = getApplicationContext();
         initUI();
-        mPresenter = new PresenterImpl(this);
+        mLoginPresenter = new LoginPresenterImpl(this);
 
     }
 
@@ -47,14 +50,26 @@ public class LoginAcitivty extends AppCompatActivity implements loginView {
                login_trigger(EmailField.getText().toString(), PWField.getText().toString());
             }
         });
+        joinButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                join_trigger();
+            }
+        });
     }
 
     @Override
     public void login_trigger(String email , String pw) {
 
-            mPresenter.login(email, pw);
+            mLoginPresenter.login(email, pw);
 
         Log.d(TAG, "로그인 버튼클릭");
+    }
+
+    @Override
+    public void join_trigger() {
+        Intent intent = new Intent(this, JoinActivity.class);
+        startActivity(intent);
     }
 
     @Override

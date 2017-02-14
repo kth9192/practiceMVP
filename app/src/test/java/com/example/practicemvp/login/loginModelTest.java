@@ -23,19 +23,14 @@ public class loginModelTest{
 
     @Mock
     private loginPresenter mloginPresenter;
-//
-//    private LoginAcitivty loginAcitivty;
-//
-//    private PresenterImpl mPresenterImple;
-//
+
     private LoginModel mloginModel;
 
     @Before
     public void setUp(){
         MockitoAnnotations.initMocks(this);
         mloginModel = new LoginModel(mCheckInteractor);
-//        loginAcitivty = new LoginAcitivty();
-//        mPresenterImple = new PresenterImpl(mloginView);
+
     }
 
     @Test

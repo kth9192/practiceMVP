@@ -5,6 +5,7 @@ package com.example.practicemvp.Join;
  */
 
 public interface joinPresenter {
-    void join();
+
+    void join(String email, String password, String nickName);
 
 }

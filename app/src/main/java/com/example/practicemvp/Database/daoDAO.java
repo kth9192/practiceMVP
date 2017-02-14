@@ -8,6 +8,7 @@ import com.example.practicemvp.login.loginInteractor;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by kth919 on 2017-02-08.
@@ -61,12 +62,14 @@ public class DaoDao implements daoService {
     @Override
     public HashMap<String, String> dataLoad() {
 
-        HashMap<String, String> memberMap = new HashMap<>();
+        Map<String, String> memberMap = new HashMap<>();
         for (int i=0; i<emailList.size(); i++) {
-            memberMap.put(emailList.get(i), PWList.get(i));
-//            Log.d(TAG, "key" + i + emailList.get(i)+ " , " + PWList.get(i));
+            memberMap.put("kth919", "1234");
+            Log.d(TAG, emailList.get(i) + "," + PWList.get(i));
         }
-        return memberMap;
+        Log.d(TAG , memberMap.get("kth919"));
+
+        return (HashMap<String, String>) memberMap;
     }
 
     @Override

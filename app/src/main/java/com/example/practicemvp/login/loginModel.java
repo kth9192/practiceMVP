@@ -1,6 +1,7 @@
 package com.example.practicemvp.login;
 
 import com.example.practicemvp.Database.DaoDao;
+import com.example.practicemvp.Database.daoService;
 
 import java.util.HashMap;
 
@@ -8,12 +9,11 @@ import java.util.HashMap;
  * Created by kth919 on 2017-02-05.
  */
 
-public class LoginModel implements loginInteractor {
+public class LoginModel implements loginInteractor  {
 
     private String TAG = LoginModel.class.getName();
 
     private loginInteractor.CheckInteractor mCheckInteractor;
-    private int login_flag = 0;
 
     DaoDao memberDAO;
 
@@ -48,4 +48,14 @@ public class LoginModel implements loginInteractor {
             mCheckInteractor.login_flag(false);
         }
     }
+
+//    @Override
+//    public HashMap<String, String> dataLoad() {
+//        return null;
+//    }
+//
+//    @Override
+//    public void dataSave() {
+//
+//    }
 }

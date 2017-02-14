@@ -1,9 +1,13 @@
 package com.example.practicemvp.Database;
 
+import android.content.pm.LabeledIntent;
+import android.util.Log;
+
 import com.example.practicemvp.login.loginInteractor;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by kth919 on 2017-02-08.
@@ -21,7 +25,6 @@ public class DaoDao implements daoService {
 
     //원래는 db에서 받아오면서 초기화
     public DaoDao() {
-
         emailList.add("kth919");
         PWList.add("1234");
         NickList.add("ㅋㅋㅋ");

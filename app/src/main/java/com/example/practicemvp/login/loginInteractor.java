@@ -11,10 +11,10 @@ import android.content.Context;
 public interface loginInteractor {
 
     //로그인 체크
-    void checkData(String email, String password);
+    void checkData(String email, String password); // 모델용
 
     interface CheckInteractor{ // db등에서 데이터를 가져오는 getData와 따로 쓰기 위해 분리
-     void login_flag(boolean flag);
+     void login_flag(boolean flag); // 프레젠터용
     }
 
 }

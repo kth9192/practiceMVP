@@ -36,30 +36,8 @@ public class loginModelTest{
     @Test
     public void checkData() throws Exception {
 
-//        HashMap<String, String> memberInfoMap = new HashMap<>();
-//
-//        for(int i = 0; i<memberInfoMap.size(); i++){
-//
-//            if (memberInfoMap.containsKey(email) &&  password == memberInfoMap.get(i))
-//            {
-//                login_thrower(true);
-//            }else {
-//                login_thrower(false);
-//            }
-//        }
-//
         mloginModel.checkData("kth919" , "1234");
-//
-//
-//    }
-//
-//    @Test
-//    public void login_thrower() {
-//        if (true) {
-//            mCheckInteractor.login_flag(true);
-//        } else {
-//            mCheckInteractor.login_flag(false);
-//        }
+
     }
 
 }

@@ -6,7 +6,7 @@ package com.example.practicemvp.Join;
 
 public interface joinInteractor {
 
-    void checkData(String email, String password, String nickName);
+    void checkDataToJoin(String email, String password, String nickName);
 
     interface presenterUse{
         void join_flag(boolean flag);

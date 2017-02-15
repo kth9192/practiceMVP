@@ -85,7 +85,7 @@ public class LoginAcitivty extends AppCompatActivity implements loginView {
                 .setPositiveButton("확인", new DialogInterface.OnClickListener(){
                     // 확인 버튼 클릭시 설정
                     public void onClick(DialogInterface dialog, int whichButton){
-                        finish();
+                        dialog.dismiss();
                     }
                 });
 

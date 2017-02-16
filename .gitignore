@@ -9,3 +9,4 @@
 .externalNativeBuild
 /gradle.properties
 /DBHelper
+app/src/main/java/com/example/practicemvp/Database/DBHelper.java
